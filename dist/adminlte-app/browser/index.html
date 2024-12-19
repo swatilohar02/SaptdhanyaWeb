@@ -1,0 +1,243 @@
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>AdminlteApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css" integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous"><!--end::Fonts--><!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/styles/overlayscrollbars.min.css" integrity="sha256-dSokZseQNT08wYEWiz5iLI8QPlKxG+TswNRD8k35cpg=" crossorigin="anonymous"><!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Third Party Plugin(Bootstrap Icons)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css" integrity="sha256-Qsx5lrStHZyR9REqhUF8iQt73X06c8LGIUPzpOhwRrI=" crossorigin="anonymous"><!--end::Third Party Plugin(Bootstrap Icons)--><!--begin::Required Plugin(AdminLTE)-->
+    <link rel="stylesheet" href="../../dist/css/adminlte.css"><!--end::Required Plugin(AdminLTE)--><!-- apexcharts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css" integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous"><!-- jsvectormap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css" integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous">
+<style>@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@-webkit-keyframes os-resize-observer-dummy-animation{0%{cursor:auto}to{cursor:none}}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:"Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,:after,:before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}body{margin:0;font-family:Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}@-webkit-keyframes progress-bar-stripes{0%{background-position:1rem 0}to{background-position:0 0}}@-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes spinner-grow{0%{-webkit-transform:scale(0);transform:scale(0)}50%{opacity:1;-webkit-transform:none;transform:none}}@media print{*,:after,:before{text-shadow:none!important;box-shadow:none!important}@page{size:a3}body{min-width:992px!important}}@-webkit-keyframes flipInX{0%{-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotateX(90deg);transition-timing-function:ease-in;opacity:0}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotateX(-20deg);transition-timing-function:ease-in}60%{-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotateX(10deg);opacity:1}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotateX(-5deg)}to{-webkit-transform:perspective(400px);transform:perspective(400px)}}@-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}@-webkit-keyframes fadeOut{0%{opacity:1}to{opacity:0}}@-webkit-keyframes shake{0%{-webkit-transform:translate(2px,1px) rotate(0);transform:translate(2px,1px) rotate(0)}10%{-webkit-transform:translate(-1px,-2px) rotate(-2deg);transform:translate(-1px,-2px) rotate(-2deg)}20%{-webkit-transform:translate(-3px,0) rotate(3deg);transform:translate(-3px) rotate(3deg)}30%{-webkit-transform:translate(0,2px) rotate(0);transform:translateY(2px) rotate(0)}40%{-webkit-transform:translate(1px,-1px) rotate(1deg);transform:translate(1px,-1px) rotate(1deg)}50%{-webkit-transform:translate(-1px,2px) rotate(-1deg);transform:translate(-1px,2px) rotate(-1deg)}60%{-webkit-transform:translate(-3px,1px) rotate(0);transform:translate(-3px,1px) rotate(0)}70%{-webkit-transform:translate(2px,1px) rotate(-2deg);transform:translate(2px,1px) rotate(-2deg)}80%{-webkit-transform:translate(-1px,-1px) rotate(4deg);transform:translate(-1px,-1px) rotate(4deg)}90%{-webkit-transform:translate(2px,2px) rotate(0);transform:translate(2px,2px) rotate(0)}to{-webkit-transform:translate(1px,-2px) rotate(-1deg);transform:translate(1px,-2px) rotate(-1deg)}}@-webkit-keyframes wobble{0%{-webkit-transform:none;transform:none}15%{-webkit-transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg);transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg)}30%{-webkit-transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg);transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg)}45%{-webkit-transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg);transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg)}60%{-webkit-transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg);transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg)}75%{-webkit-transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg)}to{-webkit-transform:none;transform:none}}body,html{min-height:100%}
+</style><link rel="stylesheet" href="styles-654T4XOA.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-654T4XOA.css"></noscript><link rel="modulepreload" href="chunk-DP6XK2WQ.js"><link rel="modulepreload" href="chunk-FK6H3RFT.js"><link rel="modulepreload" href="chunk-CWTPBX7D.js"></head>
+<body class="hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    <app-root></app-root>
+<script src="polyfills-EJ46DL77.js" type="module"></script><script src="scripts-BZ2J6SHT.js" defer></script><script src="main-MDSYVGYL.js" type="module"></script></body>
+ <!--begin::Script--> <!--begin::Third Party Plugin(OverlayScrollbars)-->
+ <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/browser/overlayscrollbars.browser.es6.min.js" integrity="sha256-H2VM7BKda+v2Z4+DRy69uknwxjyDRhszjXFhsL4gD3w=" crossorigin="anonymous"></script> <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script> <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+ <script src="../../dist/js/adminlte.js"></script> <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+ <script>
+     const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+     const Default = {
+         scrollbarTheme: "os-theme-light",
+         scrollbarAutoHide: "leave",
+         scrollbarClickScroll: true,
+     };
+     document.addEventListener("DOMContentLoaded", function() {
+         const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+         if (
+             sidebarWrapper &&
+             typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+         ) {
+             OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                 scrollbars: {
+                     theme: Default.scrollbarTheme,
+                     autoHide: Default.scrollbarAutoHide,
+                     clickScroll: Default.scrollbarClickScroll,
+                 },
+             });
+         }
+     });
+ </script> <!--end::OverlayScrollbars Configure--> <!-- OPTIONAL SCRIPTS --> <!-- sortablejs -->
+ <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js" integrity="sha256-ipiJrswvAR4VAx/th+6zWsdeYmVae0iJuiR+6OqHJHQ=" crossorigin="anonymous"></script> <!-- sortablejs -->
+ <script>
+     const connectedSortables =
+         document.querySelectorAll(".connectedSortable");
+     connectedSortables.forEach((connectedSortable) => {
+         let sortable = new Sortable(connectedSortable, {
+             group: "shared",
+             handle: ".card-header",
+         });
+     });
+
+     const cardHeaders = document.querySelectorAll(
+         ".connectedSortable .card-header",
+     );
+     cardHeaders.forEach((cardHeader) => {
+         cardHeader.style.cursor = "move";
+     });
+ </script> <!-- apexcharts -->
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js" integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script> <!-- ChartJS -->
+ <script>
+     // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+     // IT'S ALL JUST JUNK FOR DEMO
+     // ++++++++++++++++++++++++++++++++++++++++++
+
+     const sales_chart_options = {
+         series: [{
+                 name: "Digital Goods",
+                 data: [28, 48, 40, 19, 86, 27, 90],
+             },
+             {
+                 name: "Electronics",
+                 data: [65, 59, 80, 81, 56, 55, 40],
+             },
+         ],
+         chart: {
+             height: 300,
+             type: "area",
+             toolbar: {
+                 show: false,
+             },
+         },
+         legend: {
+             show: false,
+         },
+         colors: ["#0d6efd", "#20c997"],
+         dataLabels: {
+             enabled: false,
+         },
+         stroke: {
+             curve: "smooth",
+         },
+         xaxis: {
+             type: "datetime",
+             categories: [
+                 "2023-01-01",
+                 "2023-02-01",
+                 "2023-03-01",
+                 "2023-04-01",
+                 "2023-05-01",
+                 "2023-06-01",
+                 "2023-07-01",
+             ],
+         },
+         tooltip: {
+             x: {
+                 format: "MMMM yyyy",
+             },
+         },
+     };
+
+     const sales_chart = new ApexCharts(
+         document.querySelector("#revenue-chart"),
+         sales_chart_options,
+     );
+     sales_chart.render();
+ </script> <!-- jsvectormap -->
+ <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js" integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js" integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous"></script> <!-- jsvectormap -->
+ <script>
+     const visitorsData = {
+         US: 398, // USA
+         SA: 400, // Saudi Arabia
+         CA: 1000, // Canada
+         DE: 500, // Germany
+         FR: 760, // France
+         CN: 300, // China
+         AU: 700, // Australia
+         BR: 600, // Brazil
+         IN: 800, // India
+         GB: 320, // Great Britain
+         RU: 3000, // Russia
+     };
+
+     // World map by jsVectorMap
+     const map = new jsVectorMap({
+         selector: "#world-map",
+         map: "world",
+     });
+
+     // Sparkline charts
+     const option_sparkline1 = {
+         series: [{
+             data: [1000, 1200, 920, 927, 931, 1027, 819, 930, 1021],
+         }, ],
+         chart: {
+             type: "area",
+             height: 50,
+             sparkline: {
+                 enabled: true,
+             },
+         },
+         stroke: {
+             curve: "straight",
+         },
+         fill: {
+             opacity: 0.3,
+         },
+         yaxis: {
+             min: 0,
+         },
+         colors: ["#DCE6EC"],
+     };
+
+     const sparkline1 = new ApexCharts(
+         document.querySelector("#sparkline-1"),
+         option_sparkline1,
+     );
+     sparkline1.render();
+
+     const option_sparkline2 = {
+         series: [{
+             data: [515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921],
+         }, ],
+         chart: {
+             type: "area",
+             height: 50,
+             sparkline: {
+                 enabled: true,
+             },
+         },
+         stroke: {
+             curve: "straight",
+         },
+         fill: {
+             opacity: 0.3,
+         },
+         yaxis: {
+             min: 0,
+         },
+         colors: ["#DCE6EC"],
+     };
+
+     const sparkline2 = new ApexCharts(
+         document.querySelector("#sparkline-2"),
+         option_sparkline2,
+     );
+     sparkline2.render();
+
+     const option_sparkline3 = {
+         series: [{
+             data: [15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21],
+         }, ],
+         chart: {
+             type: "area",
+             height: 50,
+             sparkline: {
+                 enabled: true,
+             },
+         },
+         stroke: {
+             curve: "straight",
+         },
+         fill: {
+             opacity: 0.3,
+         },
+         yaxis: {
+             min: 0,
+         },
+         colors: ["#DCE6EC"],
+     };
+
+     const sparkline3 = new ApexCharts(
+         document.querySelector("#sparkline-3"),
+         option_sparkline3,
+     );
+     sparkline3.render();
+ </script> 
+ 
+<script>const sidebar = document.querySelector('.main-sidebar');
+    const toggleButton = document.querySelector('#sidebarToggle');
+    
+    toggleButton.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+    </script>
+ <!--end::Script-->
+</html>
